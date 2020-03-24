@@ -175,6 +175,7 @@ def read_json():
         f.close()
     cmpfun = operator.attrgetter('WatchNum')
     lists=sorted(lists,key=cmpfun, reverse=True)
+
     time.sleep(0.5)
     j = 0
     rank = path+'\\Rank'
