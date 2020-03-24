@@ -233,7 +233,7 @@ try:
                 flag = False
                 # 获取当前总页数
                 bs = BeautifulSoup(chrome.page_source, 'lxml')
-                j = bs.find_all('li', class_='page-item last')
+                j = bs.find_all('button',class_='pagination-btn')
                 for i in j:
                     last = int(i.get_text())
             else:
@@ -270,8 +270,6 @@ finally:
     with open('error.json', 'a+', encoding='utf-8') as f:
         f.write(']')
         f.close()
-    print("目前数据中播放最多的是")
-    MaxAMV.printSelf()
     print(this_num)
 read_json()
 with open ('test.txt','w+',encoding='utf-8') as f:
